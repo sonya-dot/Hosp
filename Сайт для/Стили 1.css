@@ -1,0 +1,603 @@
+/* Основные стили */
+:root {
+    --primary-color: #ff6b81;
+    --secondary-color: #ff8c66;
+    --light-color: #fff5f5;
+    --dark-color: #333;
+    --accent-color: #ff4757;
+}
+
+body {
+    font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    line-height: 1.6;
+    min-width: 1200px;
+    overflow-x: auto;
+}
+
+/* Шапка сайта */
+.main-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 400px;
+}
+
+.logo-icon {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    white-space: nowrap;
+}
+
+.logo p {
+    margin: 0.3rem 0 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Кнопки */
+.appointment-btn, .back-btn, .cta-button, .submit-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    width: auto;
+}
+
+.appointment-btn, .cta-button, .submit-btn {
+    background-color: white;
+    color: var(--primary-color);
+    border: 2px solid white;
+}
+
+    .appointment-btn:hover, .cta-button:hover, .submit-btn:hover {
+        background-color: transparent;
+        color: white;
+    }
+
+.back-btn {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    width: auto;
+}
+
+    .back-btn:hover {
+        background-color: white;
+        color: var(--primary-color);
+    }
+
+/* Навигация */
+.main-nav {
+    width: 1200px;
+    margin: 1rem auto 0;
+    padding: 0 2rem;
+}
+
+    .main-nav ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        gap: 1.5rem;
+        justify-content: center;
+    }
+
+    .main-nav a {
+        color: white;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        display: block;
+        border-bottom: 2px solid transparent;
+        transition: all 0.3s ease;
+        white-space: nowrap;
+    }
+
+        .main-nav a:hover, .main-nav a.active {
+            border-bottom-color: white;
+        }
+
+/* Основное содержимое */
+main {
+    width: 1200px;
+    margin: 2rem auto;
+    padding: 0;
+}
+
+/* Секция героя */
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    height: 400px;
+}
+
+.hero-content {
+    width: 50%;
+}
+
+.hero-image {
+    width: 50%;
+    height: 100%;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+    width: 250px;
+    text-align: center;
+}
+
+/* Карточки особенностей */
+.features {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    width: 350px;
+    margin: 0 auto;
+}
+
+    .feature-card:hover {
+        transform: translateY(-10px);
+    }
+
+    .feature-card i {
+        font-size: 3rem;
+        color: var(--primary-color);
+        margin-bottom: 1.5rem;
+    }
+
+    .feature-card h3 {
+        color: var(--secondary-color);
+        margin-bottom: 1rem;
+    }
+
+/* Форма записи */
+.appointment-container {
+    display: flex;
+    gap: 3rem;
+    margin-top: 2rem;
+    width: 1200px;
+}
+
+.appointment-form {
+    width: 800px;
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.appointment-info {
+    width: 400px;
+}
+
+.appointment-form h2 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 1.5rem;
+}
+
+    .form-row .form-group {
+        width: 50%;
+    }
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--dark-color);
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+    input:focus, select:focus, textarea:focus {
+        border-color: var(--primary-color);
+        outline: none;
+    }
+
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.8rem center;
+    background-size: 1rem;
+}
+
+.submit-btn {
+    width: 100%;
+    justify-content: center;
+    font-size: 1.1rem;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+/* Блок информации */
+.appointment-info h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+}
+
+.steps {
+    padding-left: 1.5rem;
+    line-height: 1.8;
+}
+
+    .steps li {
+        margin-bottom: 1rem;
+    }
+
+.contact-block {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    margin-top: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+    .contact-block h4 {
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+    }
+
+.phone-link {
+    display: inline-block;
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    font-weight: bold;
+    margin: 0.5rem 0;
+    text-decoration: none;
+}
+
+/* Подвал */
+.main-footer {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 2rem 0 0;
+    margin-top: 3rem;
+    width: 100%;
+}
+
+.footer-content {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-section {
+    width: 350px;
+}
+
+    .footer-section h4 {
+        margin-bottom: 1.5rem;
+        font-size: 1.2rem;
+    }
+
+    .footer-section p {
+        margin: 0.5rem 0;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+.copyright {
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+/* Стили для страницы "Услуги" */
+.services-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    width: 1200px;
+    margin: 2rem auto;
+}
+
+.service-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    width: 350px;
+    margin: 0 auto;
+}
+
+    .service-card:hover {
+        transform: translateY(-5px);
+    }
+
+.service-image {
+    height: 200px;
+    background-color: #ffecec;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .service-image i {
+        font-size: 4rem;
+        color: var(--primary-color);
+    }
+
+.service-content {
+    padding: 1.5rem;
+}
+
+    .service-content h3 {
+        color: var(--primary-color);
+        margin-top: 0;
+    }
+
+.price {
+    font-weight: bold;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+/* Стили для страницы "Врачи" */
+.doctors-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    width: 1200px;
+    margin: 2rem auto;
+}
+
+.doctor-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    width: 350px;
+    margin: 0 auto;
+}
+
+.doctor-photo {
+    height: 250px;
+    background-color: #f5f5f5;
+    position: relative;
+}
+
+    .doctor-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+.doctor-info {
+    padding: 1.5rem;
+}
+
+    .doctor-info h3 {
+        color: var(--primary-color);
+        margin-bottom: 0.5rem;
+    }
+
+.specialty {
+    color: var(--secondary-color);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.book-btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: background 0.3s;
+    width: 150px;
+}
+
+    .book-btn:hover {
+        background: var(--accent-color);
+    }
+
+/* Стили для страницы "Контакты" */
+.contact-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    width: 1200px;
+    margin: 2rem auto;
+}
+
+.contact-info {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    width: 500px;
+}
+
+    .contact-info h3 {
+        color: var(--primary-color);
+        margin-top: 0;
+    }
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.contact-icon {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-right: 1rem;
+    margin-top: 0.3rem;
+}
+
+.map-image-container {
+    width: 600px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(255, 107, 129, 0.2);
+    margin: 0;
+    border: 3px solid #fff;
+    background-color: #fff;
+}
+
+    .map-image-container img {
+        width: 100%;
+        height: 400px;
+        display: block;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    .map-image-container:hover img {
+        transform: scale(1.02);
+    }
+
+.map-caption {
+    text-align: center;
+    padding: 1rem;
+    color: var(--primary-color);
+    font-weight: bold;
+    background: linear-gradient(to right, #fff5f5, #ffecec);
+    margin: 0;
+}
+
+.departments-list {
+    margin-top: 2rem;
+    width: 1200px;
+}
+
+.department {
+    background: white;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Стили для изображения карты */
+.map-image-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(255, 107, 129, 0.3);
+    border: 4px solid white;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+    .map-image-container:hover {
+        box-shadow: 0 15px 30px rgba(255, 107, 129, 0.4);
+        transform: translateY(-5px);
+    }
+
+    .map-image-container img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-bottom: 3px solid var(--primary-color);
+    }
+
+.map-caption {
+    display: block;
+    padding: 1.2rem;
+    text-align: center;
+    background: linear-gradient(135deg, var(--light-color), white);
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-top: 2px dashed var(--secondary-color);
+}
+
+    /* Эффект "кнопки" на подписи */
+    .map-caption::after {
+        content: "→";
+        margin-left: 10px;
+        transition: margin 0.3s;
+    }
+
+.map-image-container:hover .map-caption::after {
+    margin-left: 15px;
+}

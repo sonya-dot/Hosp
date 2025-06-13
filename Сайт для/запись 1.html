@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Запись на прием - Детская больница "Радуга"</title>
+    <link rel="stylesheet" href="D:\Сайт для\Стили 1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo-container">
+            <div class="logo">
+                <i class="fas fa-heartbeat logo-icon"></i>
+                <div>
+                    <h1>Детская больница "Радуга"</h1>
+                    <p>Где здоровье встречается с заботой</p>
+                </div>
+            </div>
+            <a href="D:\Сайт для\Главная 1.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> На главную
+            </a>
+        </div>
+    </header>
+
+    <main class="appointment-container">
+        <div class="appointment-form">
+            <h2><i class="fas fa-calendar-plus"></i> Запись на прием</h2>
+
+            <form id="appointmentForm">
+                <div class="form-group">
+                    <label for="childName"><i class="fas fa-child"></i> ФИО ребенка</label>
+                    <input type="text" id="childName" name="childName" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="birthDate"><i class="fas fa-birthday-cake"></i> Дата рождения</label>
+                        <input type="date" id="birthDate" name="birthDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="parentName"><i class="fas fa-user"></i> ФИО родителя</label>
+                        <input type="text" id="parentName" name="parentName" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone"><i class="fas fa-phone"></i> Телефон</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="doctor"><i class="fas fa-user-md"></i> Специалист</label>
+                    <select id="doctor" name="doctor" required>
+                        <option value="">Выберите врача</option>
+                        <option value="pediatrician">Педиатр</option>
+                        <option value="dentist">Детский стоматолог</option>
+                        <option value="neurologist">Детский невролог</option>
+                        <option value="surgeon">Детский хирург</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="appointmentDate"><i class="fas fa-calendar-day"></i> Дата приема</label>
+                        <input type="date" id="appointmentDate" name="appointmentDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="appointmentTime"><i class="fas fa-clock"></i> Время</label>
+                        <input type="time" id="appointmentTime" name="appointmentTime" min="08:00" max="18:00" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="symptoms"><i class="fas fa-comment-medical"></i> Причина обращения</label>
+                    <textarea id="symptoms" name="symptoms" rows="4"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> Отправить запрос
+                </button>
+            </form>
+        </div>
+
+        <div class="appointment-info">
+            <h3><i class="fas fa-info-circle"></i> Как записаться?</h3>
+            <ol class="steps">
+                <li>Заполните форму записи</li>
+                <li>Наш администратор свяжется с вами для подтверждения</li>
+                <li>Приходите в назначенное время с документами</li>
+            </ol>
+
+            <div class="contact-block">
+                <h4><i class="fas fa-headset"></i> Нужна помощь?</h4>
+                <p>Звоните по телефону:</p>
+                <a href="tel:+71234567890" class="phone-link">+7 (123) 456-78-90</a>
+                <p>или напишите на <a href="mailto:info@raduga-hospital.ru">info@raduga-hospital.ru</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Адрес</h4>
+                <p><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Детская, 15</p>
+            </div>
+            <div class="footer-section">
+                <h4>Часы работы</h4>
+                <p>Пн-Пт: 8:00 - 20:00</p>
+                <p>Сб-Вс: 9:00 - 18:00</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p> 2025 Детская больница "Радуга". Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="appointment.js"></script>
+</body>
+</html>
