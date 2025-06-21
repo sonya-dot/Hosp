@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Услуги - Детская больница "Радуга"</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .icon::before {
+            display: inline-block;
+            width: 1em;
+            margin-right: 0.5em;
+            text-align: center;
+        }
+
+        .home::before {
+            content: "🏠";
+        }
+
+        .procedures::before {
+            content: "💊";
+        }
+
+        .doctor::before {
+            content: "👩⚕️";
+        }
+
+        .calendar::before {
+            content: "📅";
+        }
+
+        .phone::before {
+            content: "📞";
+        }
+
+        .heart::before {
+            content: "❤️";
+            font-size: 1.5em;
+            color: #ff7e5f;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="icon heart"></span>
+                <div>
+                    <h1>Детская больница "Радуга"</h1>
+                    <p>Где здоровье встречается с заботой</p>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html"><span class="icon home"></span>Главная</a></li>
+                    <li><a href="services.html" class="active"><span class="icon procedures"></span>Услуги</a></li>
+                    <li><a href="doctors.html"><span class="icon doctor"></span>Врачи</a></li>
+                    <li><a href="appointment.html"><span class="icon calendar"></span>Запись</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2><span class="icon procedures"></span> Наши услуги и цены</h2>
+
+        <div class="price-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Услуга</th>
+                        <th>Описание</th>
+                        <th>Стоимость</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Консультация педиатра</td>
+                        <td>Первичный осмотр и консультация специалиста</td>
+                        <td>1 500 ₽</td>
+                    </tr>
+                    <tr>
+                        <td>Вызов педиатра на дом</td>
+                        <td>Осмотр ребенка на дому в пределах города</td>
+                        <td>3 000 ₽</td>
+                    </tr>
+                    <tr>
+                        <td>Вакцинация</td>
+                        <td>Проведение плановых прививок (без стоимости вакцины)</td>
+                        <td>1 200 ₽</td>
+                    </tr>
+                    <tr>
+                        <td>Детский массаж</td>
+                        <td>Общий оздоровительный массаж (1 сеанс)</td>
+                        <td>1 800 ₽</td>
+                    </tr>
+                    <tr>
+                        <td>УЗИ брюшной полости</td>
+                        <td>Ультразвуковое исследование органов брюшной полости</td>
+                        <td>2 500 ₽</td>
+                    </tr>
+                    <tr>
+                        <td>Лечение кариеса</td>
+                        <td>Лечение кариеса молочных зубов</td>
+                        <td>3 500 ₽</td>
+                    </tr>
+                    <tr>
+                        <td>ЭКГ</td>
+                        <td>Электрокардиограмма с расшифровкой</td>
+                        <td>1 700 ₽</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="cta-section">
+            <h3>Не нашли нужную услугу?</h3>
+            <p>Позвоните нам, и мы ответим на все ваши вопросы</p>
+            <a href="tel:+71234567890" class="btn"><span class="icon phone"></span> +7 (123) 456-78-90</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>О больнице</h4>
+                    <p>Детская больница "Радуга" - современное медицинское учреждение, специализирующееся на лечении детей всех возрастов.</p>
+                </div>
+                <div class="quick-links">
+                    <h4>Быстрые ссылки</h4>
+                    <ul>
+                        <li><a href="index.html" class="quick-link"><span class="icon home"></span>Главная</a></li>
+                        <li><a href="services.html" class="quick-link"><span class="icon procedures"></span>Услуги</a></li>
+                        <li><a href="doctors.html" class="quick-link"><span class="icon doctor"></span>Врачи</a></li>
+                        <li><a href="appointment.html" class="quick-link"><span class="icon calendar"></span>Запись</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p><span class="icon phone"></span> +7 (123) 456-78-90</p>
+                    <p><span class="icon envelope"></span> info@raduga-hospital.ru</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Детская больница "Радуга". Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная - Детская больница "Радуга"</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Встроенные иконки */
+        .icon::before {
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            width: 1em;
+            margin-right: 0.5em;
+            text-align: center;
+        }
+
+        .home::before {
+            content: "🏠";
+        }
+
+        .procedures::before {
+            content: "💊";
+        }
+
+        .doctor::before {
+            content: "👩⚕️";
+        }
+
+        .calendar::before {
+            content: "📅";
+        }
+
+        .phone::before {
+            content: "📞";
+        }
+
+        .map::before {
+            content: "📍";
+        }
+
+        .clock::before {
+            content: "⏰";
+        }
+
+        .envelope::before {
+            content: "✉️";
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="icon" style="color: var(--primary); font-size: 2.5rem;">❤️</span>
+                <div>
+                    <h1>Детская больница "Радуга"</h1>
+                    <p>Где здоровье встречается с заботой</p>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html" class="active"><span class="icon home"></span>Главная</a></li>
+                    <li><a href="services.html"><span class="icon procedures"></span>Услуги</a></li>
+                    <li><a href="doctors.html"><span class="icon doctor"></span>Врачи</a></li>
+                    <li><a href="appointment.html"><span class="icon calendar"></span>Запись</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div class="hero-text">
+                <h2>Добро пожаловать в нашу больницу</h2>
+                <p>Мы предлагаем качественное медицинское обслуживание для детей всех возрастов в доброжелательной атмосфере.</p>
+                <a href="appointment.html" class="btn">Записаться на прием</a>
+            </div>
+            <div class="hero-image">
+                <img src="imageshero.jpg" alt="Детская больница Радуга">
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>О больнице</h4>
+                    <p>Детская больница "Радуга" - современное медицинское учреждение, специализирующееся на лечении детей всех возрастов.</p>
+                </div>
+                <div class="quick-links">
+                    <h4>Быстрые ссылки</h4>
+                    <ul>
+                        <li><a href="index.html" class="quick-link"><span class="icon home"></span>Главная</a></li>
+                        <li><a href="services.html" class="quick-link"><span class="icon procedures"></span>Услуги</a></li>
+                        <li><a href="doctors.html" class="quick-link"><span class="icon doctor"></span>Врачи</a></li>
+                        <li><a href="appointment.html" class="quick-link"><span class="icon calendar"></span>Запись</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p><span class="icon phone"></span> +7 (123) 456-78-90</p>
+                    <p><span class="icon envelope"></span> info@raduga-hospital.ru</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 202500 Детская больница "Радуга". Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

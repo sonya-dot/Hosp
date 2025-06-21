@@ -1,0 +1,419 @@
+:root {
+    --primary: #ff7e5f;
+    --primary-dark: #e05d3e;
+    --secondary: #ffb6b6;
+    --accent: #ffd166;
+    --light: #fff5f5;
+    --dark: #333;
+    --text: #555;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: var(--text);
+    background: var(--light);
+    line-height: 1.6;
+    min-width: 1200px;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка */
+.header {
+    background: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+    .logo h1 {
+        color: var(--primary-dark);
+        margin-bottom: 5px;
+        font-size: 1.8rem;
+    }
+
+    .logo p {
+        color: var(--text);
+        font-size: 0.9rem;
+    }
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.nav a {
+    display: flex;
+    align-items: center;
+    color: var(--dark);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px 0;
+    position: relative;
+}
+
+    .nav a.active {
+        color: var(--primary);
+    }
+
+        .nav a.active:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--primary);
+        }
+
+    .nav a:hover {
+        color: var(--primary);
+    }
+
+/* Кнопки */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: var(--primary);
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+    border: 2px solid var(--primary);
+    text-align: center;
+    cursor: pointer;
+}
+
+    .btn:hover {
+        background: var(--primary-dark);
+        border-color: var(--primary-dark);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(255,126,95,0.3);
+    }
+
+/* Главная страница */
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 60px 0;
+    gap: 50px;
+}
+
+.hero-text {
+    width: 50%;
+}
+
+.hero h2 {
+    font-size: 2.2rem;
+    color: var(--primary-dark);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    width: 50%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(255,126,95,0.2);
+}
+
+    .hero-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+.features {
+    margin: 60px 0;
+}
+
+    .features h2 {
+        text-align: center;
+        color: var(--primary-dark);
+        margin-bottom: 40px;
+        font-size: 2rem;
+    }
+
+.features-grid {
+    display: flex;
+    gap: 30px;
+}
+
+.feature-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+    .feature-card:hover {
+        transform: translateY(-10px);
+    }
+
+    .feature-card h3 {
+        color: var(--primary-dark);
+        margin: 20px 0 15px;
+    }
+
+/* Страница услуг */
+.price-table {
+    margin: 40px 0;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+    .price-table table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .price-table th {
+        background: var(--primary);
+        color: white;
+        padding: 15px;
+        text-align: left;
+    }
+
+    .price-table td {
+        padding: 15px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .price-table tr:nth-child(even) {
+        background: var(--light);
+    }
+
+    .price-table tr:hover {
+        background: #ffebeb;
+    }
+
+.cta-section {
+    text-align: center;
+    padding: 40px;
+    background: white;
+    border-radius: 15px;
+    margin: 60px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+    .cta-section h3 {
+        font-size: 1.5rem;
+        color: var(--primary-dark);
+        margin-bottom: 15px;
+    }
+
+/* Страница врачей */
+.doctors-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.doctor-card {
+    width: calc(50% - 15px);
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    display: flex;
+    transition: transform 0.3s;
+}
+
+    .doctor-card:hover {
+        transform: translateY(-5px);
+    }
+
+.doctor-photo {
+    width: 200px;
+    height: 250px;
+    overflow: hidden;
+}
+
+    .doctor-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s;
+    }
+
+.doctor-card:hover .doctor-photo img {
+    transform: scale(1.1);
+}
+
+.doctor-info {
+    padding: 20px;
+    flex: 1;
+}
+
+    .doctor-info h3 {
+        color: var(--primary-dark);
+        margin-bottom: 10px;
+    }
+
+.specialty {
+    color: var(--primary);
+    font-weight: bold;
+    margin: 10px 0;
+    display: block;
+}
+
+.page-description {
+    text-align: center;
+    color: var(--text);
+    margin-bottom: 40px;
+}
+
+/* Форма записи */
+.appointment-form {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: var(--primary-dark);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-family: inherit;
+        font-size: 1rem;
+        transition: border-color 0.3s;
+    }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+    .form-group textarea {
+        resize: vertical;
+        min-height: 120px;
+    }
+
+/* Подвал */
+.footer {
+    background: var(--primary-dark);
+    color: white;
+    padding: 40px 0 20px;
+    margin-top: 60px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-section {
+    width: 30%;
+}
+
+    .footer-section h4 {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 10px;
+    }
+
+        .footer-section h4:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--accent);
+        }
+
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-section p {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+.quick-links {
+    width: 30%;
+}
+
+    .quick-links ul {
+        list-style: none;
+        padding: 0;
+    }
+
+.quick-link {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s;
+    border-left: 3px solid transparent;
+    padding-left: 10px;
+}
+
+    .quick-link:hover {
+        color: var(--accent);
+        border-left: 3px solid var(--accent);
+        transform: translateX(5px);
+    }
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}

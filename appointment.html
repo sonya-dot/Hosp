@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Запись на прием - Детская больница "Радуга"</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .icon::before {
+            display: inline-block;
+            width: 1em;
+            margin-right: 0.5em;
+            text-align: center;
+        }
+
+        .home::before {
+            content: "🏠";
+        }
+
+        .procedures::before {
+            content: "💊";
+        }
+
+        .doctor::before {
+            content: "👩⚕️";
+        }
+
+        .calendar::before {
+            content: "📅";
+        }
+
+        .heart::before {
+            content: "❤️";
+            font-size: 1.5em;
+            color: #ff7e5f;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="icon heart"></span>
+                <div>
+                    <h1>Детская больница "Радуга"</h1>
+                    <p>Где здоровье встречается с заботой</p>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html"><span class="icon home"></span>Главная</a></li>
+                    <li><a href="services.html"><span class="icon procedures"></span>Услуги</a></li>
+                    <li><a href="doctors.html"><span class="icon doctor"></span>Врачи</a></li>
+                    <li><a href="appointment.html" class="active"><span class="icon calendar"></span>Запись</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2><span class="icon calendar"></span> Запись на прием</h2>
+        <p class="page-description">Заполните форму ниже, и мы свяжемся с вами для подтверждения записи</p>
+
+        <div class="appointment-form">
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">ФИО ребенка</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Возраст ребенка</label>
+                    <input type="number" id="age" name="age" min="0" max="18" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="parent">ФИО родителя/опекуна</label>
+                    <input type="text" id="parent" name="parent" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Телефон для связи</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email (необязательно)</label>
+                    <input type="email" id="email" name="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="doctor">Выберите врача</label>
+                    <select id="doctor" name="doctor">
+                        <option value="">Любой доступный педиатр</option>
+                        <option value="Иванова А.С.">Иванова Анна Сергеевна (педиатр)</option>
+                        <option value="Петров А.В.">Петров Алексей Владимирович (хирург)</option>
+                        <option value="Сидорова Е.В.">Сидорова Елена Викторовна (невролог)</option>
+                        <option value="Кузнецов Д.О.">Кузнецов Дмитрий Олегович (стоматолог)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Желаемая дата</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="time">Желаемое время</label>
+                    <input type="time" id="time" name="time" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Дополнительная информация</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+
+                <button type="submit" class="btn">Отправить заявку</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>О больнице</h4>
+                    <p>Детская больница "Радуга" - современное медицинское учреждение, специализирующееся на лечении детей всех возрастов.</p>
+                </div>
+                <div class="quick-links">
+                    <h4>Быстрые ссылки</h4>
+                    <ul>
+                        <li><a href="index.html" class="quick-link"><span class="icon home"></span>Главная</a></li>
+                        <li><a href="services.html" class="quick-link"><span class="icon procedures"></span>Услуги</a></li>
+                        <li><a href="doctors.html" class="quick-link"><span class="icon doctor"></span>Врачи</a></li>
+                        <li><a href="appointment.html" class="quick-link"><span class="icon calendar"></span>Запись</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p><span class="icon phone"></span> +7 (123) 456-78-90</p>
+                    <p><span class="icon envelope"></span> info@raduga-hospital.ru</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Детская больница "Радуга". Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
